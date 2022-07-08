@@ -1,0 +1,8 @@
+[Unit]
+Description=Sound System (System)
+
+[Socket]
+ListenStream=%t/pulse/native
+
+[Install]
+WantedBy=sockets.target

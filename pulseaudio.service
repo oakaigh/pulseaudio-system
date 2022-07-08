@@ -1,0 +1,11 @@
+[Unit]
+Description=Sound Service (System)
+Requires=pulseaudio.socket
+
+[Service]
+ExecStart=/usr/bin/env -- pulseaudio --system --daemonize=no --log-target=journal
+Restart=on-failure
+
+[Install]
+Also=pulseaudio.socket
+WantedBy=multi-user.target
